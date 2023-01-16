@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetails">
+
+    <ImageView
+        android:contentDescription="Poster image for the current movie"
+        android:id="@+id/details_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:background="@color/purple_500"
+        tools:layout_height="600dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/details_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/vertical_shadow_gradient">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="sans-serif-light"
+            android:textSize="36sp"
+            android:textColor="?attr/colorOnPrimary"
+            tools:text="The One" />
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srb_borderColor="#FF9800"
+            app:srb_fillColor="#FFC107"
+            app:srb_numberOfStars="5"
+            app:srb_rating="3"
+            app:srb_starSize="20dp"
+            app:srb_stepSize="0.5"
+            app:srb_isIndicator="true"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="Average User Ratings Bar, zero to five stars." />
+
+
+
+        <TextView
+            android:id="@+id/overview_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/rating_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:textColor="?attr/colorOnPrimary"
+            tools:text="In a land when things went left one man thought that things could right" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

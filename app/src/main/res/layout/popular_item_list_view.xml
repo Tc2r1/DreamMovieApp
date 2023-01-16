@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?attr/transparentBackgroundHighlight">
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center_horizontal"
+            app:srb_borderColor="#FF9800"
+            app:srb_fillColor="#FFC107"
+            app:srb_numberOfStars="5"
+            app:srb_rating="3"
+            app:srb_starSize="44dp"
+            app:srb_isIndicator="true"
+            app:srb_stepSize="0.5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="275dp"
+            android:layout_height="392dp"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:id="@+id/movie_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="Poster of the selected Movie!" />
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="tm">
+        <attr name="colorAgainstPrimary" format="color" />
+        <attr name="transparentBackgroundHighlight" format="color" />
+
+    </declare-styleable>
+</resources>
