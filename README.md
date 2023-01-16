@@ -50,31 +50,3 @@ It leverages the following components from the Jetpack library:
 
 
 ## Tc2r's Notes
-
-[Scalar](https://square.github.io/retrofit/) is a library that allows retrofit to return the json result as a String.
-
-Retrofit is a library that creates a network API for an application. Based on the content from a web service
-
-The Network Layer is the Api that the ViewModel will use to communicate with a web service.
-
-
-The Moshi Library parses Json into Json Objects
-
-
-**Retrofit has Coroutine Support**
-
-Using the Library "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:" Retrofit is able
-to add a CoroutineCallAdapterFactory.
-
-This enables retrofit to produce a Coroutine based Api.
-The CoroutineCallAdapterFactory allows the ability to replace the "Call" in the Service methods with Deferred from Coroutines.
-
-Deferred is a type of non-blocking Cancellable job that can directly return a result.
-
-Because Retrofit does everything on a background thread, we can use the UI thread andd dont need any other threads.
-
-When using CoroutineScope/ Jobs in ViewModel, don't forget to cancel them in the OnClear Lifecycle.
-
-Built a bindingAdapter that takes the url from an xml attribute associated with an imageview and use glide to load the image
-
-Parcelling is a way of sharing objects between different processes by flattening objects into a stream of data called a Parcel. 
